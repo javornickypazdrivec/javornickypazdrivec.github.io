@@ -80,15 +80,25 @@
 
             <div id="navigation">
                 <ul id="nav">
-                    <li class="first active"><a href="index.html" title="Titulní stránka">Titulní stránka</a></li>
-                    <li><a href="filosofie-akce.html" title="Filosofie akce">Filosofie akce</a></li>
+                    <li class="first {% if page.url == '/' %}active{% endif %}">
+                        <a href="index.html" title="Titulní stránka">Titulní stránka</a>
+                    </li>
+                    <li class="{% if page.url == '/filosofie-akce.html' %}active{% endif %}">
+                        <a href="filosofie-akce.html" title="Filosofie akce">Filosofie akce</a>
+                    </li>
                     <!--<li><a href="propozice.html" title="Propozice MTB" >Propozice MTB</a></li>-->
-                    <li><a href="kids-race.html" title="Propozice KIDS">Propozice KIDS</a></li>
+                    <li class="{% if page.url == '/kids-race.html' %}active{% endif %}">
+                        <a href="kids-race.html" title="Propozice KIDS">Propozice KIDS</a>
+                    </li>
                     <!--<li><a href="program.html" title="Program" >Program</a></li>-->
                     <!--<li><a href="n-a.html" title="Registrace" >Registrace</a></li>-->
                     <!--<li><a href="prakticke-informace.html" title="Praktické informace" >Praktické informace</a></li>-->
-                    <li><a href="partneri.html" title="Partneři">Partneři</a></li>
-                    <li class="last"><a href="o-nas.html" title="O nás">O nás</a></li>
+                    <li class="{% if page.url == '/partneri.html' %}active{% endif %}">
+                        <a href="partneri.html" title="Partneři">Partneři</a>
+                    </li>
+                    <li class="last {% if page.url == '/o-nas.html' %}active{% endif %}">
+                        <a href="o-nas.html" title="O nás">O nás</a>
+                    </li>
                 </ul>
             </div>
             <div class="clear"></div>
